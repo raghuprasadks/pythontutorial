@@ -1,0 +1,119 @@
+1. Write a program that accepts a comma separated sequence of words as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+
+my_str = input("Enter a string: ")
+
+# breakdown the string into a list of words
+words = my_str.split()
+
+# sort the list
+words.sort()
+
+# display the sorted words
+
+print("The sorted words are:")
+for word in words:
+   print(word)
+
+2. Write a program that accepts a sentence and calculate the number of letters and digits.
+Suppose the following input is supplied to the program:
+
+s = input()
+d={"DIGITS":0, "LETTERS":0}
+for c in s:
+    if c.isdigit():
+        d["DIGITS"]+=1
+    elif c.isalpha():
+        d["LETTERS"]+=1
+    else:
+        pass
+print "LETTERS", d["LETTERS"]
+print "DIGITS", d["DIGITS"]
+
+3. Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the user name of a given email address. Both user names and company names are composed of letters only.
+
+import re
+emailAddress = raw_input()
+pat2 = "(\w+)@((\w+\.)+(com))"
+r2 = re.match(pat2,emailAddress)
+print r2.group(1)
+
+4. Please write a program using list comprehension to print the Fibonacci Sequence in comma separated form with a given n input by console.
+def f(n):
+    if n == 0: return 0
+    elif n == 1: return 1
+    else: return f(n-1)+f(n-2)
+
+n=int(raw_input())
+values = [str(f(x)) for x in range(0, n+1)]
+print ",".join(values)
+
+5.Write a binary search function which searches an item in a sorted list. The function should return the index of element to be searched in the list.
+
+import math
+def bin_search(li, element):
+    bottom = 0
+    top = len(li)-1
+    index = -1
+    while top>=bottom and index==-1:
+        mid = int(math.floor((top+bottom)/2.0))
+        if li[mid]==element:
+            index = mid
+        elif li[mid]>element:
+            top = mid-1
+        else:
+            bottom = mid+1
+
+    return index
+
+li=[2,5,7,9,11,17,222]
+print bin_search(li,11)
+print bin_search(li,12)
+
+6. Define a class Person and its two child classes: Male and Female. All classes have a method "getGender" which can print "Male" for Male class and "Female" for Female class.
+class Person(object):
+    def getGender( self ):
+        return "Unknown"
+
+class Male( Person ):
+    def getGender( self ):
+        return "Male"
+
+class Female( Person ):
+    def getGender( self ):
+        return "Female"
+
+aMale = Male()
+aFemale= Female()
+print aMale.getGender()
+print aFemale.getGender()
+
+7.Python Program that Reads a Text File and Counts the Number of Times a Certain Letter Appears in the Text File
+fname = input("Enter file name: ")
+l=input("Enter letter to be searched:")
+k = 0
+ 
+with open(fname, 'r') as f:
+    for line in f:
+        words = line.split()
+        for i in words:
+            for letter in i:
+                if(letter==l):
+                    k=k+1
+print("Occurrences of the letter:")
+print(k)
+
+8. Python Program to Remove the Duplicate Items from a List
+
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+b = set()
+unique = []
+for x in a:
+    if x not in b:
+        unique.append(x)
+        b.add(x)
+print("Non-duplicate items:")
+print(unique)

@@ -1,0 +1,5 @@
+conda install -c conda-forge pyinstaller
+conda install -c anaconda pywin32
+
+
+pyinstaller --onefile <your_script_name>.py

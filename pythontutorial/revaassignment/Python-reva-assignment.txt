@@ -1,0 +1,22 @@
+Conditions and iterative statements
+
+1. Program to accept three integers and print the largest of the three. Make use of only if statement.
+
+2. Program that takes a number and check whether the given number is odd or even.
+
+3.Program that inputs three numbers and calculates two sums as per this.
+
+4.programs to test the divisibility of a number with another number(i.e. if a number is divisible by anothe number).
+
+5. Program to find the multiples of a number(the divisor) out of given five numbers.
+
+6. Program to display a menu for calculating area of a circle or perimeter of a circle.
+
+7. Program that reads two numbers and an arithamwtic operators and display the computed results.
+
+8.Program that reads three numbers(integers) amd prints them in ascending order.
+
+9.Program to print whether a given character is an uppercase or a lowercase character or a digit or any character.
+
+10. Program to calculate and print roots of a quadratic equation: ax^2+bx+c=0.
+

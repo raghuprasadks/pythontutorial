@@ -1,0 +1,119 @@
+SQL -Structured Query Language
+
+1. Show databases
+show databases;
+2. Create database
+create database pythondb;
+3. Use the database
+use pythondb;
+4.Create table
+create table student(
+id integer,
+name varchar(100),
+branch varchar(100),
+dob date,
+fee decimal);
+5. Insert data into table
+
+insert into student values(1,'raghu','engineering','1980-04-04',10000.00);
+
+insert into student values(2,'ravi','MCA','1982-06-04',5000.00);
+
+insert into student values(3,'ranjita','Performing Arts','1982-06-04',7000.00);
+
+insert into student values(4,'kavya','BBA','1984-06-04',7500.00);
+
+
+
+6. Select
+
+select * from student;
+7. select name,stream from student;
+
+8. select * from student where stream='science';
+
+9. select * from student where stream='Science' and fee = 15000;
+10. select * from student where fee>12000;
+11. select * from student where fee>=12000;
+
+
+sum
+avg
+min
+max
+
+
+12.CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (ID)
+);
+13.CREATE TABLE Orders (
+    OrderID int primary key,
+    Amount decimal NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(ID)
+);
+
+
+https://sqlitebrowser.org/
+https://www.tutorialspoint.com/sqlite/sqlite_python.htm
+
+https://www.geeksforgeeks.org/python-gui-tkinter/
+
+www.kaushalya.tech
+
+https://www.geeksforgeeks.org/whatsapp-using-python/
+
+20. Create table with primary   key
+
+create table customer(
+customerid int primary key,
+name varchar(150),
+address varchar(250),
+mobile bigint);
+insert into customer values 
+(1,'raghu','mcechs layout',9845547471);
+
+create table orders(
+orderid int primary key,
+item varchar(100),
+quantity int,
+rate double(9,2),
+amount double(12,2),
+customerid int REFERENCES customer(customerid));
+
+insert into orders values (1,'mobile',1,15000,15000,1);
+
+alter table orders
+add item varchar(100);
+
+select * from customer,orders 
+where customer.customerid = orders.customerid;
+
+select name,item,quanity,rate,amount 
+from customer,orders where 
+customer.customerid = orders.customerid;
+
+select customer.name,orders.item,quantity,rate,amount 
+from customer,orders where 
+customer.customerid = orders.customerid and 
+name='raghu';
+
+create table product(
+product_id int primary key,
+product_name varchar(150) unique,
+product_rate double(10,2) not null
+);
+
+alter table product
+add product_desc varchar(250);
+
+
+alter table product
+add product_reorder_level int 
+check(product_reorder_level>5);
+    
