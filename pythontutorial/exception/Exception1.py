@@ -1,3 +1,11 @@
+#with out expection handling
+n = int(input('Enter a number to validate division by zero'))
+
+div = 100/n
+
+print('result is ',div)
+
+
 d = int(input('Enter a number to validate division by zero'))
 try:
     a=10/d
@@ -21,6 +29,7 @@ else:
 
 try:
     a=10/0
+    #a=10/'raghu'
     print(a)
 #except ArithmeticError,NameError: - 3.6 does not support
 except ZeroDivisionError:
@@ -34,7 +43,8 @@ else:
 #Finally Block
 
 try:
-    a=10/0;
+    #a=10/0;
+    a=10/2;
     print(a)
 except ZeroDivisionError:
     print(ZeroDivisionError)
@@ -71,6 +81,7 @@ class Student(object):
 		self.age = age
 		self.twitter_url = twitter_url
 		self.google_plus = google_plus
+        self.
 
 	def __str__(self):
 		# Override to print a readable string presentation of your object

@@ -9,13 +9,13 @@ Mode	Description
 '+'	Open a file for updating (reading and writing)
 '''
 def main():
-    #f= open("guru99-new.txt","w+")
-    f=open("guru99-new2.txt",="a")
-    for i in range(40,50):
-        f.write("This is new line %d\r\n" % (i+1))
+    f= open("filedemo.txt","a")
+    #f=open("guru99-new2.txt",="a")
+    for i in range(20,31):
+        f.write("This is new line %d\r\n" % (i))
     f.close()
     #Open the file back and read the contents
-    f=open("guru99-new2.txt", "r")
+    f=open("filedemo.txt", "r")
     if(f.mode == 'r'):
         contents =f.read()
         print(contents)

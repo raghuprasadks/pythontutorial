@@ -1,6 +1,7 @@
 #Function
 def func1():
     print('I am learning python  function')
+    
 func1()
 #Square
 def square(x):
@@ -49,5 +50,6 @@ r = float(input('Enter Rate of interest'))
 t = float(input('Enter Time in year'))
 interest = simpleInterest(p,r,t)
 print('Simple interest is ',interest)
+
 
 

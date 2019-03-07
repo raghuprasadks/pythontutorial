@@ -8,7 +8,8 @@ def main():
     # exercise the class methods
     c = myClass()
     c.method1()
-    c.method2("Python")    
+    c.method2("Python")
+    
     c1 = myClass()
     c1.method1()
     c1.method2("Machine Learning")

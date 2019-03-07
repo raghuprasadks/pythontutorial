@@ -13,6 +13,7 @@ class Bike:
     def ride(self):
         print ("Riding...")
         self.miles += 10
+        print('Current distance ',self.miles)
         return self
 
     def reverse(self):
@@ -20,10 +21,15 @@ class Bike:
             print ("Cannot reverse bike that hasn't been ridden forward")
         else:
             self.miles -= 5
-            print ("Reversing")
+        print ("Reversing : miles " ,self.miles)
         return self
 
-bike1 = Bike(5000, 250)
+bike1 = Bike(500000, 180)
+bike1.displayInfo()
+bike1.ride()
+bike1.ride()
+bike1.reverse()
+
 bike2 = Bike(500, 35)
 bike3 = Bike(50, 2)
 

@@ -1,6 +1,7 @@
 class Animal:
     def eat(self):
         print('Eating')
+        
 class Dog(Animal):
     def bark(self):
         print('Barking')
@@ -42,10 +43,10 @@ del mySecondCar
 class Parent(object):
     def __init__(self):
         #super(Parent,self).__init__()
-        print("Parent")
+        print("Parent:Grand parent")
 class Child():
     def __init__(self):
-       # super(Child,self).__init__()
+        super(Child,self).__init__()
         print("Child")
 class GrandChild(Child,Parent):
  '''   def __init__(self):
@@ -123,3 +124,27 @@ ravi = Student('Ravi Kumar',21,9845547471)
 ravi.info()
 print('name ',ravi.name)
 print('mobile ',ravi.mobile)
+
+
+# Method overriding
+
+class Vehicle():
+    def start(self):
+        print('Vehicle is kick started')
+    def stop(self):
+        print('Vehicle is stopped')
+    
+class Bike(Vehicle):
+    def start (self):
+        print('Bike button started')
+    def info(self):
+        print('I am a bike')
+
+suzuki = Bike()
+suzuki.start()
+suzuki.info()
+suzuki.stop()
+
+myVehicle = Vehicle()
+myVehicle.start()
+#myVehicle.info()

@@ -16,7 +16,6 @@ a= 'kaushalya'
 b = 100
 #print(a+b)
 print(a+' '+str(b))
-
 print('printing ')
 print(a,b,c)
 print(b)
@@ -26,7 +25,7 @@ print(' value of a is ',a,'\n value of b is ',b)
 p=100 # Global variable
 print('Global scope:Initial ',p)
 def localscope():
-    global p
+    #global p
     p=10
     print ('Local scope ',p)
     print ('Iam in this block')

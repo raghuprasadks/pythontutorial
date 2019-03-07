@@ -13,7 +13,6 @@
 #required.
 #Even numbers
 
-
 def double(x):
     return x *2
 double(10)
@@ -37,7 +36,6 @@ print(new_list)
 # Change this value for a different result
 
 terms = int(input("How many terms? "))
-
 for i in range(terms):
     print(i)
 # use anonymous function
@@ -65,8 +63,6 @@ my_list = [12, 65, 54, 39, 102, 339, 221]
 result = list(filter(lambda x: (x % 13 == 0), my_list))
 # display the result
 print("Numbers divisible by 13 are",result)
-
-
 # Python code to illustrate  
 # reduce() with lambda() 
 # to get sum of a list 

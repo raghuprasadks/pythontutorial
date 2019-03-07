@@ -2,7 +2,7 @@ fname = input("Enter file name: ")
 l = input("Enter letter to be searched:")
 k = 0
 
-with open(fname, 'r') as f:
+with open(fname, 'r') as f: # f = open(fname,'r')
     for line in f:
         words = line.split()
         for i in words:

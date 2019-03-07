@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('test1.db')
+conn = sqlite3.connect('demosql.db')
 print("Opened database successfully")
 
 conn.execute("INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) \

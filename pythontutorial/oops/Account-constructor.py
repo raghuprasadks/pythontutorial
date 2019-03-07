@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 import random
 class Account():
-    def openAccount(self,name,address,idproof):
+    #constructor
+    def __init__(self,name,address,idproof):
         print('Account:openAccount')
         self.name = name
         self.address = address
         self.idproof = idproof
         self.balance = 0
         self.accountNo = random.randint(1,100)
-        return self.accountNo
+        #return self.accountNo
     
     def deposit(self,acctNo,amount):
         print('Account:deposit')
@@ -30,9 +31,10 @@ class Account():
         self.accountNo = acctNo
         return self.balance 
     
-    
-myAcct = Account()
-acctNo = myAcct.openAccount('Raghu','Jakkur','DL-1233')
+#acctNo = Account()    
+myAcct = Account('Raghu','Jakkur','DL-1233')
+acctNo = myAcct.accountNo
+#acctNo = myAcct.openAccount('Raghu','Jakkur','DL-1233')
 print('Your account no is ',acctNo)
 amt = 10000
 balance = myAcct.deposit(acctNo,amt)
@@ -55,5 +57,5 @@ print('Your balance after withdrawal of  ',amt, 'is ',balance)
 
 balance = myAcct.checkBalance(acctNo)
 print('Your current balance is  ',balance)
-#9480606913
+
 

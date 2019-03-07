@@ -188,7 +188,9 @@ print(new_email_address)
 
 '''
 compile(pattern, flags=0)
-Compiles a regular expression pattern into a regular expression object. When you need to use an expression several times in a single program, using the compile() function to save the resulting regular expression object for reuse is more efficient. This is because the compiled versions of the most recent patterns passed to compile() and the module-level matching functions are cached.
+Compiles a regular expression pattern into a regular expression object. 
+When you need to use an expression several times in a single program, using the compile() function to save the resulting regular expression object for reuse is more efficient. 
+This is because the compiled versions of the most recent patterns passed to compile() and the module-level matching functions are cached.
 '''
 
 pattern = re.compile(r"cookie")

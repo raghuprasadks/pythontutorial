@@ -1,12 +1,12 @@
 print(__name__)
 #IF
-def main():
+def main1():
     x,y=2,8
     if(y>x):
         print ('Y is Greater ',y)      
 #main()
 if(__name__=="__main__"):
-    main()
+    main1()
 #Else
 def main():
     x,y=10,8

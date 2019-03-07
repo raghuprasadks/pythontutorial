@@ -72,7 +72,7 @@ else:
    print("Line 2 - y is available in the given list")
 
 #Identity Operators
-x = 20
+x = 30
 y = 30
 
 if (x is y):
